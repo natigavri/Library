@@ -6,7 +6,39 @@
     <link href="style.css" rel="stylesheet">
     <title>Library</title>
 </head>
-<body>
+<body class="text-center">
+    <dialog id="newBook">
+        <form id="newBookForm" method="dialog">
+            <button class="closeModal">x</button>
+            <div class="bookForm">
+                <div class="inputRow">
+                    <label for="addTitle">Title:</label>
+                    <input id="addTitle" name="addTitle" type="text" autofocus>
+                </div>
+                <div class="inputRow">
+                    <label for="addAuthor">Author:</label>
+                    <input type="text" name="addAuthor" id="addAuthor">
+                </div>
+                <div class="inputRow">
+                    <label for="addGenre">Genre:</label>
+                    <input type="text" name="addGenre" id="addGenre">
+                 </div>
+                 <div class="inputRow">
+                    <label for="addPages">Pages:</label>
+                    <input type="number" name="addPages" id="addPages">
+                </div>
+                 <fieldset class="inputRow">
+                    <legend for="addRead">Read?</legend>
+                    <input type="radio" name="addRead" id="readYes" value="yes" checked>
+                    <label for="readYes">Yes</label>
+                    <input type="radio" name="addRead" id="readNo" value="no">
+                    <label for="readNo">No</label>
+                </fieldset>
+            </div>
+            <button class="submitBtn" type="submit" id="submitBook"> Submit new book</button>
+        </form>
+    </dialog>
+    <button class="bookBTN">New Book</button>
     <div id="libContainer" class="container">
         <div id="libGrid" class="grid"></div>
     </div>
